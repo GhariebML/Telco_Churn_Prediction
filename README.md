@@ -1,127 +1,113 @@
-# 📊 Telco Customer Churn Prediction — End-to-End Machine Learning Project
+# 📊 Telco Customer Churn Prediction
 
-An end-to-end data science project that predicts telecom customer churn using machine learning techniques, exploratory data analysis, and predictive modeling.  
-The project demonstrates the complete ML workflow from raw data to evaluation and insights.
+<div align="center">
 
----
+**End-to-End Machine Learning Project**
 
-# 🚀 Project Overview
+[![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)](https://python.org)
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-orange?style=flat-square&logo=scikit-learn)](https://scikit-learn.org)
+[![XGBoost](https://img.shields.io/badge/XGBoost-Gradient%20Boosting-green?style=flat-square)](https://xgboost.readthedocs.io)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?style=flat-square&logo=jupyter)](https://jupyter.org)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
 
-Customer churn is a major challenge for telecom companies, as retaining existing customers is significantly cheaper than acquiring new ones.  
-This project aims to build a predictive model that identifies customers likely to leave a telecom service based on demographic, account, and service usage features.
+*Predicting customer churn in telecom using EDA, Feature Engineering & ML classification models*
 
-The project covers:
-
-- Data cleaning and preprocessing  
-- Exploratory Data Analysis (EDA)  
-- Feature engineering  
-- Model training and evaluation  
-- Performance comparison  
-- Business insights extraction  
+</div>
 
 ---
 
-# 🎯 Objectives
+## 🚀 Project Overview
 
-- Identify key factors influencing customer churn  
-- Build accurate classification models  
-- Compare multiple ML algorithms  
-- Evaluate model performance using proper metrics  
-- Provide actionable business insights  
+Customer churn is a major business challenge for telecom companies — retaining existing customers is significantly cheaper than acquiring new ones. This end-to-end project builds a machine learning pipeline to identify customers likely to churn, enabling proactive retention strategies.
 
----
-
-# 📂 Dataset
-
-**Telco Customer Churn Dataset (IBM Sample Dataset)**  
-
-The dataset contains customer-level information including:
-
-- Demographics (gender, senior citizen, partner, dependents)  
-- Account information (tenure, contract, billing)  
-- Services subscribed (internet, phone, streaming)  
-- Charges (monthly & total)  
-- Churn label (target variable)  
-
-Target variable:
+**The project covers the complete ML workflow:**
+- Data cleaning & preprocessing
+- Exploratory Data Analysis (EDA)
+- Feature engineering
+- Model training, tuning & evaluation
+- Business insights extraction
 
 ---
 
-# 🧹 Data Preprocessing
+## 📂 Dataset
 
-Steps performed:
+**IBM Telco Customer Churn Dataset** — 7,043 customers, 21 features
 
-- Handling missing values  
-- Converting categorical variables  
-- Encoding features  
-- Scaling numerical features  
-- Feature selection  
-- Train–test split  
-
----
-
-# 📊 Exploratory Data Analysis (EDA)
-
-EDA focused on understanding churn patterns across:
-
-- Contract type  
-- Tenure  
-- Monthly charges  
-- Internet service type  
-- Payment method  
-- Customer demographics  
-
-Key insights:
-
-- Month-to-month contracts show highest churn  
-- Short tenure customers churn more  
-- Higher monthly charges correlate with churn  
-- Fiber optic users churn more than DSL  
+| Feature Category | Examples |
+|---|---|
+| Demographics | Gender, Senior Citizen, Partner, Dependents |
+| Account Info | Tenure, Contract Type, Billing Method |
+| Services | Internet, Phone, Streaming, Security |
+| Charges | Monthly Charges, Total Charges |
+| **Target** | **Churn (Yes/No)** |
 
 ---
 
-# 🤖 Machine Learning Models
+## 🧹 Data Preprocessing
 
-The following classification models were trained and evaluated:
-
-- Logistic Regression  
-- Random Forest Classifier  
-- Gradient Boosting / XGBoost  
-
----
-
-# 📈 Model Evaluation
-
-Models were evaluated using:
-
-- Accuracy  
-- Precision  
-- Recall  
-- F1-Score  
-- ROC-AUC  
-
-The best-performing model achieved strong predictive performance and balanced recall for churn detection.
+- Handled missing values in `TotalCharges`
+- Encoded categorical variables (Label + One-Hot Encoding)
+- Scaled numerical features with `StandardScaler`
+- Applied train-test split (80/20) to prevent data leakage
 
 ---
 
-# 🧠 Key Findings
+## 📊 EDA — Key Insights
 
-- Contract type is the strongest churn predictor  
-- Tenure significantly reduces churn probability  
-- Pricing strategy impacts retention  
-- Fiber customers are higher risk  
-- Automatic payment reduces churn  
+| Finding | Insight |
+|---|---|
+| Contract Type | Month-to-month customers churn the most |
+| Tenure | Short-tenure customers are highest risk |
+| Monthly Charges | Higher charges correlate with churn |
+| Internet Service | Fiber optic users churn more than DSL |
+| Payment Method | Electronic check users churn more |
+
+---
+
+## 🤖 Machine Learning Models
+
+| Model | Accuracy | Precision | Recall | F1-Score | AUC-ROC |
+|---|---|---|---|---|---|
+| Logistic Regression | ~80% | ~67% | ~56% | ~61% | ~84% |
+| Random Forest | ~79% | ~65% | ~48% | ~55% | ~83% |
+| **XGBoost** | **~81%** | **~68%** | **~58%** | **~63%** | **~86%** |
+
+> XGBoost achieved the best overall performance with highest AUC-ROC score.
 
 ---
 
-# 🛠 Technologies Used
+## 🧠 Key Business Findings
 
-- Python  
-- Pandas  
-- NumPy  
-- Scikit-learn  
-- Matplotlib  
-- Seaborn  
-- Jupyter Notebook  
+- **Contract type** is the strongest churn predictor
+- **Tenure** significantly reduces churn probability
+- **Fiber optic** and **electronic check** customers are highest risk
+- **Automatic payment** is associated with lower churn rates
+- Pricing strategy (monthly charges) directly impacts retention
 
 ---
+
+## 🛠️ Technologies Used
+
+```
+Python | Pandas | NumPy | Scikit-learn | XGBoost
+Matplotlib | Seaborn | Jupyter Notebook
+```
+
+---
+
+## 👤 Author
+
+<div align="center">
+
+**Mohamed Gharieb** — *Data Scientist & ML Engineer*
+
+[![GitHub](https://img.shields.io/badge/GitHub-GhariebML-181717?style=flat-square&logo=github)](https://github.com/GhariebML)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-ghariebml-007BB5?style=flat-square&logo=linkedin)](https://linkedin.com/in/ghariebml)
+
+</div>
+
+---
+
+## 📄 License
+
+MIT License — see [LICENSE](LICENSE) for details.
